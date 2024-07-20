@@ -365,6 +365,7 @@ def format_for_json(packages: "_ProcessedDists", options: Values) -> str:
         if options.verbose >= 1:
             info["location"] = dist.location or ""
             info["installer"] = dist.installer
+            info["metadata"] = dist.metadata_dict
         if options.outdated:
             info["latest_version"] = str(dist.latest_version)
             info["latest_filetype"] = dist.latest_filetype
